@@ -1,0 +1,212 @@
+body{
+    background: -webkit-gradient(linear, left top, left bottom, from(var(--day-color)), to(var(--dayLighter))) fixed;
+    margin: 40px 10px 40px 10px;
+    font-family: 'Erica One', cursive;
+    color: white;
+
+    --night-color: #06060f;
+    --nightLighter: #0c3044;
+    --day-color: #2996ca;
+    --dayLighter: #2bc1c8;
+    
+}
+
+#logo{
+    filter:  brightness(0) invert(1);
+    max-width: 2em;
+    margin: 0 auto;
+    display:inline-block;
+    transform:translate3d(0,100%,0);
+    animation:slideUp 3s infinite;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+input{
+    border-radius: 5px;
+    padding: 1em;
+    border: none;
+}
+
+.input_error{
+    border-radius: 5px;
+    padding: 1em;
+    border:2px solid #c57b7b;
+    -webkit-animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+	animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+button{
+    height: 3.4em;
+    border-radius: 5px;
+}
+
+p{
+    margin-top: 1.5em;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+form{
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.card{
+    align-self: center;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+}
+
+#ville{
+    text-align: center;
+    font-size: 6em;
+    line-height: 0.8em;
+}
+
+#temp{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 10em;
+    line-height: 0.8em;
+}
+
+#info{
+    font-size: 3em;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 0.8em;
+    margin-top: 0.5em;
+}
+
+#country{
+    text-transform: uppercase;
+
+    text-align: center;
+    grid-column: span 2;
+    font-size: 4em;
+}
+
+
+@media screen and (min-width: 1200px){
+    .card{
+        align-self: center;
+        width: 70%;
+        display: grid;
+        grid-template-columns:  1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin-top: 70px;
+    }
+    
+    
+    
+    #ville{
+        color: white;
+        text-transform: uppercase;
+        font-size: 6em;
+        align-self: end;
+        justify-self: end;
+        line-height: 0.8em;
+    }
+    
+    #info{
+        font-size: 4em;
+        grid-row-start: 2;
+        align-self: start;
+        justify-self: end;
+        line-height: 0.8em;
+        text-transform: uppercase;
+    }
+    
+    
+    #temp{
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 15em;
+        grid-row: span 2;
+        align-self: center;
+        justify-self: start;
+        line-height: 0.8em;
+    }
+
+}
+
+
+@keyframes slideUp{
+    0%{transform:traslate3d(0,100%,0)}
+    50%{transform:translate3d(0,0,0)}
+}
+
+@-webkit-keyframes shake-horizontal {
+    0%,
+    100% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70% {
+        -webkit-transform: translateX(-10px);
+                transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60% {
+        -webkit-transform: translateX(10px);
+                transform: translateX(10px);
+    }
+    80% {
+        -webkit-transform: translateX(8px);
+                transform: translateX(8px);
+    }
+    90% {
+        -webkit-transform: translateX(-8px);
+                transform: translateX(-8px);
+    }
+}
+@keyframes shake-horizontal {
+    0%,
+    100% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+    10%,
+    30%,
+    50%,
+    70% {
+        -webkit-transform: translateX(-10px);
+                transform: translateX(-10px);
+    }
+    20%,
+    40%,
+    60% {
+        -webkit-transform: translateX(10px);
+                transform: translateX(10px);
+    }
+    80% {
+        -webkit-transform: translateX(8px);
+                transform: translateX(8px);
+    }
+    90% {
+        -webkit-transform: translateX(-8px);
+                transform: translateX(-8px);
+    }
+}
+
+
+   
+
+.color1 {color: #06060f;}
+.color2 {color: #0c3044;}
+.color3 {color: #1a5b81;}
+.color4 {color: #2996ca;}
+.color5 {color: #2bc1c8;}
