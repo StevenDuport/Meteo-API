@@ -1,3 +1,5 @@
+import {access_key} from "./api.js";
+
 const meteo = {
 
     loadMeteoFromAPi: function (event){
@@ -5,7 +7,7 @@ const meteo = {
         const requestValue = document.querySelector('input').value;
         console.log(requestValue)
         console.log("Methode LoadMeteoFromApi")
-        const urlRoot = 'http://api.weatherstack.com/current?access_key=';
+        const urlRoot = 'http://api.weatherstack.com/current?access_key=' + access_key;
 
         fetch(urlRoot + '&query=' + requestValue )
         .then(
@@ -15,7 +17,6 @@ const meteo = {
         )
         .then(
             function(meteoFromApi){
-                console.log(meteoFromApi);
                 const countryTodisplay = document.getElementById('country')
                 const villeTodisplay = document.getElementById('ville');
                 const tempTodisplay = document.getElementById('temp');
@@ -40,9 +41,6 @@ const meteo = {
                     const body = document.body.style.background;
                     document.body.style.background='-webkit-gradient(linear, left top, left bottom, from(var(--night-color)), to(var(--nightLighter))) fixed';
                 }
-                console.log(meteoFromApi.location.name);
-                console.log(meteoFromApi.current.weather_descriptions[0]);
-                console.log(meteoFromApi.current.is_day);
                 input.classList.remove("input_error");
             }
         )
@@ -66,7 +64,6 @@ const meteo = {
     getCity: function(event){
         event.preventDefault();
         const requestValue = document.querySelector('input').value;
-        console.log(requestValue)
     }
 };
 

@@ -3,12 +3,10 @@ body{
     margin: 40px 10px 40px 10px;
     font-family: 'Erica One', cursive;
     color: white;
-
     --night-color: #06060f;
     --nightLighter: #0c3044;
     --day-color: #2996ca;
     --dayLighter: #2bc1c8;
-    
 }
 
 #logo{
@@ -32,6 +30,7 @@ input{
     border: none;
 }
 
+
 .input_error{
     border-radius: 5px;
     padding: 1em;
@@ -41,9 +40,22 @@ input{
 }
 
 button{
-    height: 3.4em;
+    height: 3.3em;
+    width: 4em;
     border-radius: 5px;
+    font-family: 'Erica One', cursive;
+    text-transform: uppercase;
+    border: none;
+    background-color: white;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    color: var(--day-color);
 }
+
+button:active{
+    transform: translateY(2px);
+}
+
+
 
 p{
     margin-top: 1.5em;
@@ -74,7 +86,7 @@ form{
 #temp{
     text-transform: uppercase;
     text-align: center;
-    font-size: 10em;
+    font-size: 6.5em;
     line-height: 0.8em;
 }
 
